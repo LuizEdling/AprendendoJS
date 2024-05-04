@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="numero1">Insira o primeiro número</label>
+        <input type="text" name="numero1" id="numero1">
+        <br>
+        <label for="numero2">Insira o segundo número</label>
+        <input type="text" name="numero2" id="numero2">
+        <br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit', function(evento){
+            evento.preventDefault();
+
+            const numero1 = document.getElementById('numero1').value;
+            const numero2 = document.getElementById('numero2').value;
+            if(numero1 > numero2){
+                console.log(numero1);
+            }
+            else if(numero1 == numero2){
+                console.log('Os números são iguais');
+            }else{
+                console.log(numero2);
+            }
+        });
+
+    </script>
+</body>
+</html> 

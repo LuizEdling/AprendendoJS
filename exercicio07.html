@@ -1,0 +1,25 @@
+<!-- Escreva um programa em JavaScript que exiba na tela o fatorial de um
+número fornecido pelo usuário. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+
+        var num = parseInt(prompt("Digite o numero que será fatorado: "))
+        var fatorial = 1;
+
+        for ( var i = 1; i <= num; i++){
+            fatorial *= i;
+        }
+
+        document.write("O fatorial de " + num + " é: " + fatorial)
+
+    </script>
+</body>
+</html>

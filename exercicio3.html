@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="nota">Insira a nota</label>
+        <input type="text" name="nota" id="nota">
+        <br>
+        <input type="submit">
+        
+    </form>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit', function(evento){
+            evento.preventDefault();
+
+           const nota = document.getElementById('nota').value;
+           if(nota < 6){
+            alert('Reprovado!!');
+            return false;
+           }else if(nota >= 6 && nota < 8){
+            alert('Aprovado!!');
+            return false;
+           }else{
+            alert('Aprovado com Louvor!!');
+           }
+        });
+
+    </script>
+</body>
+</html> 

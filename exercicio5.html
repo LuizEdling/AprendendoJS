@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="letra1">Insira a letra</label>
+        <input type="text" name="letra1" id="letra1">
+        <br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit', function(evento){
+            evento.preventDefault();
+
+            const letra1 = document.getElementById('letra1').value;
+            
+            if(letra1 == 'a'){
+                alert("A");
+            }else if(letra1 == 'b'){
+                alert("B");
+            }else{
+                alert("Outra letra");
+            }
+        });
+
+    </script>
+</body>
+</html> 

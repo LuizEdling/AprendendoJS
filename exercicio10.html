@@ -1,0 +1,61 @@
+<!-- Escreva um programa em JavaScript que exiba na tela a média dos
+elementos de uma matriz. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Média dos Elementos da Matriz</title>
+</head>
+<body>
+
+<script>
+    var linhas = parseInt(prompt("Digite quantas linhas a matriz vai ter: "));
+    var colunas = parseInt(prompt("Digite quantas colunas a matriz vai ter: "));
+    var matriz = [];
+
+    for (var i = 0; i < linhas; i++) {
+        matriz[i] = [];
+        for (var j = 0; j < colunas; j++) {
+            matriz[i][j] = parseInt(prompt("Digite o valor da posição [" + i + "][" + j + "]:"));
+        }
+    }
+
+    var somaElementos = 0;
+
+    for (var i = 0; i < linhas; i++) {
+        for (var j = 0; j < colunas; j++) {
+            somaElementos += matriz[i][j];
+        }
+    }
+
+    var media = somaElementos / (linhas * colunas);
+
+    document.write("<p>Matriz inserida pelo usuário:</p>");
+    document.write("<table border='1'>");
+    for (var i = 0; i < linhas; i++) {
+        document.write("<tr>");
+        for (var j = 0; j < colunas; j++) {
+            document.write("<td>" + matriz[i][j] + "</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    document.write("<p>A média dos elementos da matriz é: " + media.toFixed(2) + "</p>");
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
